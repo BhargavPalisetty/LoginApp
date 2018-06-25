@@ -1,0 +1,25 @@
+<div class="back" >
+  <div class="div-center back">
+    <div class="content">
+      <h3>SignUp</h3>
+      <hr />
+      <form  (ngSubmit)="onSubmit(signupform)" #signupform = "ngForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input ngModel type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input ngModel type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" >
+        </div>
+        <div class="form-group">
+          <label for="cpwd">Confirm Password:</label>
+          <input ngModel type="password" class="form-control" id="cpwd" placeholder="Confirm password" name="cpwd">
+        </div>
+        <p style="color:red">{{formstatus}}</p>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+        <button type="button" class="btn btn-link loginlink" routerLink="/login">login</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="back">
+  <div class="div-center">
+    <div class="content">
+      <h3>Login</h3>
+      <hr />
+      <form (ngSubmit)="onlogin(loginform)" #loginform="ngForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input ngModel type="email" class="form-control" id="email" required placeholder="Enter email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input ngModel type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        </div>
+        <p style="color:red">{{formstatus}}</p>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <hr />
+        <button type="button" class="btn btn-link" routerLink='/signup'>Signup</button>
+        <button type="button" class="btn btn-link" routerLink='/reset'>Reset Password</button>
+      </form>
+    </div>
+  </div>
+</div>
